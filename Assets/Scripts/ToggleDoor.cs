@@ -19,6 +19,7 @@ public class ToggleDoor : MonoBehaviour
             {
                 door.transform.rotation = Quaternion.Euler(Vector3.right * 5f);
             }
+            isDoorOpen = true;
         }
         else
         {
@@ -26,6 +27,7 @@ public class ToggleDoor : MonoBehaviour
             {
                 door.transform.rotation = Quaternion.Euler(Vector3.right * -5f);
             }
+            isDoorOpen = false;
         }
     }
 }
