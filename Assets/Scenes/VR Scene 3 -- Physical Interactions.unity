@@ -1475,7 +1475,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2980,6 +2980,7 @@ GameObject:
   - component: {fileID: 1741569113}
   - component: {fileID: 1741569117}
   - component: {fileID: 1741569114}
+  - component: {fileID: 1741569115}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -3054,6 +3055,20 @@ MonoBehaviour:
   m_PlayHapticsOnHoverExit: 0
   m_HapticHoverExitIntensity: 0
   m_HapticHoverExitDuration: 0
+--- !u!64 &1741569115
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741569112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2424622706892375604, guid: 12058974d1fdae14c93d2ae460450ca8, type: 3}
 --- !u!114 &1741569117
 MonoBehaviour:
   m_ObjectHideFlags: 0
