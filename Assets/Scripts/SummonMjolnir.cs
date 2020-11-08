@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class SummonMjolnir : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject mjolnir;
+    
+    public void Summon()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        mjolnir.SetActive(true);
     }
 }
