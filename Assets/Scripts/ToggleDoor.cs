@@ -15,18 +15,12 @@ public class ToggleDoor : MonoBehaviour
     {
         if (!isDoorOpen)
         {
-            if (doorHinge.angle != doorHinge.limits.max)
-            {
-                door.transform.rotation = Quaternion.Euler(Vector3.right * 5f);
-            }
+            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 0.5f);
             isDoorOpen = true;
         }
         else
         {
-            if (doorHinge.angle != 0f)
-            {
-                door.transform.rotation = Quaternion.Euler(Vector3.right * -5f);
-            }
+            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * 0.5f);
             isDoorOpen = false;
         }
     }
