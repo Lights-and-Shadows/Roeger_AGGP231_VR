@@ -11,16 +11,23 @@ public class ToggleDoor : MonoBehaviour
     public HingeJoint doorHinge;
     public GameObject door;
 
+    public Vector3 oldRot, newRot;
+
+    public void Start()
+    {
+        oldRot = door.transform.eulerAngles;
+        newRot = new Vector3(0, 0, doorHinge.limits.min);
+    }
     public void ToggleTheDoor()
     {
         if (!isDoorOpen)
         {
-            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 0.5f);
+            door.transform.Rotate(0f, 0f, -5f);
             isDoorOpen = true;
         }
         else
         {
-            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * 0.5f);
+            door.transform.Rotate(0f, 0f, 5f);
             isDoorOpen = false;
         }
     }
